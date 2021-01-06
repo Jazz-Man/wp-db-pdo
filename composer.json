@@ -1,5 +1,6 @@
 {
     "name": "jazzman/wp-db-pdo",
+    "license": "MIT",
     "config": {
         "sort-packages": true,
         "preferred-install": "dist",
