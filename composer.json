@@ -1,0 +1,37 @@
+{
+    "name": "jazzman/wp-db-pdo",
+    "config": {
+        "sort-packages": true,
+        "preferred-install": "dist",
+        "optimize-autoloader": true,
+        "classmap-authoritative": true
+    },
+    "require-dev": {
+        "dg/composer-cleaner": "^2.2",
+        "roave/security-advisories": "dev-master"
+    },
+    "authors": [
+        {
+            "name": "Vasyl Sokolyk",
+            "email": "vsokolyk@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^7.1",
+        "ext-PDO": "*",
+        "roots/wordpress": "^5"
+    },
+    "extra": {
+        "installer-paths": {
+            "vendor/wp/wp-content/mu-plugins/{$name}/": ["type:wordpress-muplugin"],
+            "vendor/wp/wp-content/plugins/{$name}/": ["type:wordpress-plugin"],
+            "vendor/wp/wp-content/themes/{$name}/": ["type:wordpress-theme"]
+        },
+        "wordpress-install-dir": "vendor/wp"
+    },
+    "autoload": {
+        "files": [
+            "app_db_pdo.php"
+        ]
+    }
+}
