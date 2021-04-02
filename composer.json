@@ -5,7 +5,8 @@
         "sort-packages": true,
         "preferred-install": "dist",
         "optimize-autoloader": true,
-        "classmap-authoritative": true
+        "classmap-authoritative": true,
+        "apcu-autoloader": true
     },
     "require-dev": {
         "dg/composer-cleaner": "^2.2",
@@ -20,6 +21,7 @@
     "require": {
         "php": "^7.1",
         "ext-PDO": "*",
+        "latitude/latitude": "^4.2",
         "roots/wordpress": "^5"
     },
     "extra": {
@@ -34,5 +36,6 @@
         "files": [
             "app_db_pdo.php"
         ]
-    }
+    },
+    "description": "WordPres Db PDO Wrapper"
 }
