@@ -1,5 +1,10 @@
 {
     "name": "jazzman/wp-db-pdo",
+    "description": "WordPres Db PDO Wrapper",
+    "keywords": [
+        "wp-db",
+        "wp-db-pdo"
+    ],
     "license": "MIT",
     "config": {
         "sort-packages": true,
@@ -7,10 +12,6 @@
         "optimize-autoloader": true,
         "classmap-authoritative": true,
         "apcu-autoloader": true
-    },
-    "require-dev": {
-        "dg/composer-cleaner": "^2.2",
-        "roave/security-advisories": "dev-master"
     },
     "authors": [
         {
@@ -21,21 +22,14 @@
     "require": {
         "php": "^7.1",
         "ext-PDO": "*",
-        "latitude/latitude": "^4.2",
-        "roots/wordpress": "^5"
+        "latitude/latitude": "^4.2"
     },
-    "extra": {
-        "installer-paths": {
-            "vendor/wp/wp-content/mu-plugins/{$name}/": ["type:wordpress-muplugin"],
-            "vendor/wp/wp-content/plugins/{$name}/": ["type:wordpress-plugin"],
-            "vendor/wp/wp-content/themes/{$name}/": ["type:wordpress-theme"]
-        },
-        "wordpress-install-dir": "vendor/wp"
+    "require-dev": {
+        "roave/security-advisories": "dev-master"
     },
     "autoload": {
         "files": [
             "app_db_pdo.php"
         ]
-    },
-    "description": "WordPres Db PDO Wrapper"
+    }
 }
