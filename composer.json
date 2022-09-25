@@ -1,35 +1,51 @@
 {
-    "name": "jazzman/wp-db-pdo",
-    "description": "WordPres Db PDO Wrapper",
-    "keywords": [
-        "wp-db",
-        "wp-db-pdo"
-    ],
-    "license": "MIT",
-    "config": {
-        "sort-packages": true,
-        "preferred-install": "dist",
-        "optimize-autoloader": true,
-        "classmap-authoritative": true,
-        "apcu-autoloader": true
-    },
-    "authors": [
-        {
-            "name": "Vasyl Sokolyk",
-            "email": "vsokolyk@gmail.com"
-        }
-    ],
-    "require": {
-        "php": "^7.1",
-        "ext-PDO": "*",
-        "latitude/latitude": "^4.2"
-    },
-    "require-dev": {
-        "roave/security-advisories": "dev-master"
-    },
-    "autoload": {
-        "files": [
-            "app_db_pdo.php"
-        ]
+  "name": "jazzman/wp-db-pdo",
+  "description": "WordPres Db PDO Wrapper",
+  "keywords": [
+    "wp-db",
+    "wp-db-pdo"
+  ],
+  "license": "MIT",
+  "config": {
+    "sort-packages": true,
+    "preferred-install": "dist",
+    "optimize-autoloader": true,
+    "classmap-authoritative": true,
+    "apcu-autoloader": true,
+    "allow-plugins": {
+      "roots/wordpress-core-installer": true
     }
+  },
+  "authors": [
+    {
+      "name": "Vasyl Sokolyk",
+      "email": "vsokolyk@gmail.com"
+    }
+  ],
+  "require": {
+    "php": "^7.4|^8.1",
+    "ext-PDO": "*",
+    "latitude/latitude": "^4.2"
+  },
+  "require-dev": {
+    "jazzman/php-cs-fixer-rules": "^0.1.2",
+    "roave/security-advisories": "@dev",
+    "roots/wordpress": "^6.0"
+  },
+  "autoload": {
+    "files": [
+      "src/helper.php"
+    ]
+  },
+  "extra": {
+    "installer-paths": {
+      "vendor/wp/wp-content/mu-plugins/{$name}/": ["type:wordpress-muplugin"],
+      "vendor/wp/wp-content/plugins/{$name}/": ["type:wordpress-plugin"],
+      "vendor/wp/wp-content/themes/{$name}/": ["type:wordpress-theme"]
+    },
+    "wordpress-install-dir": "vendor/wp"
+  },
+  "scripts": {
+    "php-cs-fixer": "php-cs-fixer fix -vvv --diff"
+  }
 }
