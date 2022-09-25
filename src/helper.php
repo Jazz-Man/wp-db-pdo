@@ -1,17 +1,16 @@
 <?php
 
-if (!\function_exists('app_db_pdo')) {
+if (!function_exists('app_db_pdo')) {
     /**
      * @throws \PDOException
      */
-    function app_db_pdo(): PDO
-    {
+    function app_db_pdo(): PDO {
         global $wpdb;
 
         static $db;
 
         if (null === $db) {
-            $dsn = \sprintf('mysql:host=%1$s;dbname=%2$s', $wpdb->dbhost, $wpdb->dbname);
+            $dsn = sprintf('mysql:host=%1$s;dbname=%2$s', $wpdb->dbhost, $wpdb->dbname);
 
             $pdo_options = [
                 \PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
