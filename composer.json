@@ -23,14 +23,13 @@
     }
   ],
   "require": {
-    "php": "^7.4|^8.1",
-    "ext-PDO": "*",
-    "latitude/latitude": "^4.2"
+    "php": "^7.4|^8",
+    "ext-PDO": "*"
   },
   "require-dev": {
-    "jazzman/php-cs-fixer-rules": "^0.1.2",
+    "jazzman/php-cs-fixer-rules": "^0.1.5",
     "roave/security-advisories": "@dev",
-    "roots/wordpress": "^6.0"
+    "roots/wordpress": "^6.2"
   },
   "autoload": {
     "files": [
