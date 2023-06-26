@@ -27,7 +27,7 @@
     "ext-PDO": "*"
   },
   "require-dev": {
-    "jazzman/php-cs-fixer-rules": "^0.1.5",
+    "jazzman/php-cs-fixer-rules": "^0.2.0",
     "roave/security-advisories": "@dev",
     "roots/wordpress": "^6.2"
   },
